@@ -7,10 +7,12 @@ Practical1 of devops
 As a user, I want to select a mathematical operation I wish to perform so that I can specify the type of calculation I need.
 
 2. Standard Arithmetic Function:
+As a user, I want to be able to perform standard arithmetic operations such as addition, subtraction, division, and multiplication, so that I can calculate basic mathematical expressions. 
+As a developer, I want to implement error handling in the program to ensure it can handle potential issues such as division by zero and the entry of invalid inputs such as non-numeric values.
 
 3. Trigonometric Functions:
 As a user, I want to be able to calculate trigonometry values with this calculator like sin, cos, tan, inverse sin, inverse cos and inverse tan for a given angle or value, so that I can solve trigonometry problems
-As a developer, I want to ensure that the calculator system wiill be able to handle errors. Ensuring invalid input will not break and will inform the user about the error.
+As a developer, I want to ensure that the calculator system will be able to handle errors. Ensuring invalid input will not break and will inform the user about the error.
 
 4. Exponents:
 
