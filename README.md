@@ -15,6 +15,8 @@ As a developer, I want to ensure that the calculator system wiill be able to han
 4. Exponents:
 
 5. Square Root Calculation:
+As a user, I want to be able to key in a value and get the square root value, so that i can solve square root problem given a value. As a developer, I want to ensure that the inputs are valid and will be able to handle invalid inputs such as a string.
  
 6. Percentage Calculation:
-
+As a user, I want to be able to find out the percentage of a total value given a value. I also want to be able to find the value of a total value given the percentage. So that I am able to solve problems with percentage. 
+As a developer, I want to ensure that the inputs are valid and will be able to handle invalid inputs such as a string.
