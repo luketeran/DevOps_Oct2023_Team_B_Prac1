@@ -38,8 +38,17 @@ def arithmetic():
         else:
             print('Please enter a valid operation (1, 2, 3, 4, or 0).')
 
+def trigo_menu():
+    print('\nChoose a trigonometry operation:')
+    print('1. Sin')
+    print('2. Cos')
+    print('3. Tan')
+    print('4. Inverse Sin')
+    print('5. Inverse Cos')
+    print('6. Inverse Tan')
+    print('0. Back')
 
-def trigonometry(choice, input_value):
+def trigo_calculation(choice, input_value):
     input_value = float(input_value)
     if choice == '1':
         return math.sin(math.radians(input_value))
@@ -60,6 +69,27 @@ def trigonometry(choice, input_value):
         degree = math.degrees(radian)
         return [radian, degree]
 
+def trigonometry():
+    input_options = ['1','2','3','4','5','6']
+    while True: 
+        trigo_menu()
+        choice = input('> ')
+        if choice == '0':
+            break
+        elif choice not in input_options:
+            print('Please enter a valid input.')
+        else:
+            input_value = input("Enter a value/angle: ")
+            try:
+                result = trigo_calculation(choice, input_value)
+                if choice in input_options[:3]:
+                    print('Result: {:.2f}'.format(result))
+                else:
+                    print('Result: {:.2f} radian, {:.2f} degree'.format(result[0],result[1]))
+            except Exception as err:
+                print('Error message: {}'.format(err))
+                print('Please enter a valid input.')
+
 def exponents():
     pass
 
@@ -71,7 +101,7 @@ def square_root():
         else:
             print('Value to Square Root')
             try:
-                value = float(input('>'))
+                value = float(input('> '))
                 print()
                 print('Square Root Value is \t')
                 print(math.sqrt(value))
@@ -83,13 +113,13 @@ def sqrt_menu():#menu to display when the option for the square root function is
     print('\nChoose an Option: ')
     print('1. Input')
     print('0. Exit')
-    option = input(">")
+    option = input("> ")
     return option
 
 def getPercentage():
     try:
-        value = float(input('Enter Value: \n>'))
-        totalValue = float(input('Enter Total Value: \n>'))
+        value = float(input('Enter Value: \n> '))
+        totalValue = float(input('Enter Total Value: \n> '))
 
     except ValueError:
         print('Please Enter a number')
@@ -115,7 +145,7 @@ def percentage_Menu():#menu to display when the option for the percentage functi
         print('1. Find Percentage')
         print('2. Find Value of a Percentage')
         print('0. Exit')
-        option = input(">")
+        option = input("> ")
 
         if (option == '1'):
             getValue()
@@ -133,7 +163,7 @@ def main_menu():
     print('3. Exponents')
     print('4. Square Root')
     print('5. Percentage')
-    print('6. Exit')
+    print('0. Exit')
 
 def main():
     main_menu()
@@ -143,32 +173,7 @@ def main():
             arithmetic()
             break
         elif category == '2':
-            input_options = ['1','2','3','4','5','6']
-            while True: 
-                print('\nChoose a trigonometry operation:')
-                print('1. Sin')
-                print('2. Cos')
-                print('3. Tan')
-                print('4. Inverse Sin')
-                print('5. Inverse Cos')
-                print('6. Inverse Tan')
-                print('7. Back')
-                choice = input('> ')
-                if choice == '7':
-                    break
-                elif choice not in input_options:
-                    print('please enter a valid input.')
-                else:
-                    input_value = input("Enter a value/angle: ")
-                    try:
-                        result = trigonometry(choice, input_value)
-                        if choice in input_options[:3]:
-                            print('Result: {:.2f}'.format(result))
-                        else:
-                            print('Result: {:.2f} radian, {:.2f} degree'.format(result[0],result[1]))
-                    except Exception as err:
-                        print('Error message: {}'.format(err))
-                        print('Please enter a valid input.')
+            trigonometry()
             break
         elif category == '3':
             exponents()
@@ -179,7 +184,7 @@ def main():
         elif category == '5':
             percentage_Menu()
             break
-        elif category == '6':
+        elif category == '0':
             return 'exit'
         else:
             print('Please enter a valid input.')
