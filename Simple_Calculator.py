@@ -1,7 +1,43 @@
 import math
 
 def arithmetic():
-    pass
+
+    while True:
+        print('\nChoose an operation:')
+        print('1. Addition')
+        print('2. Subtraction')
+        print('3. Multiplication')
+        print('4. Division')
+        print('5. Back')
+        operation = input("> ")
+        if operation == '5': #returns to main menu
+            break
+        
+        elif operation in ['1', '2', '3', '4']:
+            try:
+                value1 = float(input('Enter the first number: '))
+                value2 = float(input('Enter the second number: '))
+
+                if operation == '1': #addition
+                    result = value1 + value2
+                    print('Result: {:.2f}'.format(result))
+                elif operation == '2':#substraction
+                    result = value1 - value2
+                    print('Result: {:.2f}'.format(result))
+                elif operation == '3': #multiplication
+                    result = value1 * value2
+                    print('Result: {:.2f}'.format(result))
+                elif operation == '4': #division
+                    if value2 == 0:
+                        print('Division by zero is not allowed.')
+                    else:
+                        result = value1 / value2
+                        print('Result: {:.2f}'.format(result))
+            except ValueError:
+                print('Please enter valid numeric values.')
+        else:
+            print('Please enter a valid operation (1, 2, 3, 4, or 0).')
+
 
 def trigonometry(choice, input_value):
     input_value = float(input_value)
