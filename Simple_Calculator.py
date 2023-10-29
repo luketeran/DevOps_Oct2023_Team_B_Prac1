@@ -91,7 +91,25 @@ def trigonometry():
                 print('Please enter a valid input.')
 
 def exponents():
-    pass
+    while(True):
+        print('\nChoose a exponent operation:')
+        print('1. Power')
+        print('2. Back')
+        choice = input(">")
+        if choice == '2': #return to main menu
+            break
+        elif choice == '1':
+            try: 
+                baseVal = int(input('Enter base value: '))
+                expVal = int(input('Enter power value: '))
+
+                result = baseVal ** expVal
+                print('Result: {}'.format(result))
+
+            except ValueError:
+                print('Please enter valid numeric values.')
+        else:
+            print('Please enter a valid operation (1, 2).')
 
 def square_root():
     while(True):
