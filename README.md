@@ -15,6 +15,8 @@ As a user, I want to be able to calculate trigonometry values with this calculat
 As a developer, I want to ensure that the calculator system will be able to handle errors. Ensuring invalid input will not break and will inform the user about the error.
 
 4. Exponents:
+As a user, I want to be able to calculate exponent values with this calculator and able to assign which is the base value and the power value.
+As a developer, I want to ensure the calculator system is able to handles invalid choices and display clear results for users to read.
 
 5. Square Root Calculation:
 As a user, I want to be able to key in a value and get the square root value, so that i can solve square root problem given a value. As a developer, I want to ensure that the inputs are valid and will be able to handle invalid inputs such as a string.
